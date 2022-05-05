@@ -52,7 +52,7 @@ function getButtonReply(interaction) {
     * @param {boolean} [options.childMode=false] Whether to use Akinator's Child Mode. Defaults to "false".
     * @param {"character" | "animal" | "object"} [options.gameType="character"] The Type of Akinator Game to Play. Defaults to "character".
     * @param {boolean} [options.useButtons=false] Whether to use Discord's Buttons. Defaults to "false".
-    * @param {Discord.ColorResolvable} [options.embedColor="RANDOM"] The Color of the Message Embeds. Defaults to "RANDOM".
+    * @param {Discord.ColorResolvable} [options.embedColor="#2f3136"] The Color of the Message Embeds. Defaults to "#2f3136".
     * @returns {Promise<Discord.Message>} Discord.js Akinator Game
     * @example
     * const { Client, Intents } = require("discord.js");
@@ -94,7 +94,7 @@ module.exports = async function (input, options = {}) {
         options.childMode = options.childMode || false;
         options.gameType = options.gameType || "character";
         options.useButtons = options.useButtons || false;
-        options.embedColor = Discord.Util.resolveColor(options.embedColor || "RANDOM")
+        options.embedColor = Discord.Util.resolveColor(options.embedColor || "#2f3136")
         
         
 
