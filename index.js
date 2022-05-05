@@ -9,25 +9,25 @@ const Discord = require("discord.js")
 function getButtonReply(interaction) {
     interaction = interaction.customId;
 
-    if (interaction === "<:icons_Correct:859388130411282442>") { //yes
+    if (interaction === "✅") { //yes
         return "y"
     }
-    else if (interaction === "<:icons_Wrong:859388130636988436>") { //no
+    else if (interaction === "❌") { //no
         return "n"
     }
-    else if (interaction === "<:icons_question:860133545905225768>") { //don't know
+    else if (interaction === "❓") { //don't know
         return "i"
     }
-    else if (interaction === "<:icons_like:865488228719394876>") { //probably
+    else if (interaction === "👍") { //probably
         return "p"
     }
-    else if (interaction === "<:icons_dislike:865488228642848778>") { //probably not
+    else if (interaction === "👎") { //probably not
         return "pn"
     }
-    else if (interaction === "<:icons_leftarrow:860123643816312852>") { //back
+    else if (interaction === "⏪") { //back
         return "b"
     }
-    else if (interaction === "<:icons_outage:868122243845206087>") { //stop game
+    else if (interaction === "🛑") { //stop game
         return "s"
     }
     else return null;
