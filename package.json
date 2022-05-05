@@ -1,22 +1,22 @@
 {
-  "name": "discord.js-akinator",
-  "version": "3.3.1",
+  "name": "djs-akinator",
+  "version": "4.0.1",
   "description": "A Discord.js v13 Module that allows you to Create an Akinator Command for Your Discord Bot within Seconds of Installation.",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/WillTDA/Discord.js-Akinator-Package-Dev"
+    "url": "https://github.com/Shafat21/djs-akinator"
   },
   "keywords": [
     "akinator",
     "discord.js",
     "aki-api"
   ],
-  "author": "WillTDA",
-  "license": "Apache-2.0",
+  "author": "Shafat21",
+  "license": "GNU General Public License v3.0",
   "dependencies": {
     "@vitalets/google-translate-api": "^7.0.0",
     "aki-api": "^6.0.8",
