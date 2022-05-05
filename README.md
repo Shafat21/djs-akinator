@@ -5,9 +5,6 @@
 A Discord.js v13 Module that allows you to Create an Akinator Command for Your Discord Bot within Seconds of Installation.
 
 
-
-
-
 ## Features
 
 - 🌎 <b>100+ Languages Supported!</b> | Lightning fast translation has been made possible by Google Translate and hard-coded mappings!
@@ -45,7 +42,7 @@ client.on("ready", () => {
     console.log("Bot is Online")
 });
 
-const PREFIX = "!";
+const PREFIX = "+";
 
 //Example options
 
@@ -53,7 +50,7 @@ const language = "en"; //The Language of the Game
 const childMode = false; //Whether to use Akinator's Child Mode
 const gameType = "character"; //The Type of Akinator Game to Play. ("animal", "character" or "object")
 const useButtons = true; //Whether to use Discord's Buttons
-const embedColor = "#2f3136"; //The Color of the Message Embeds
+const embedColor = "#2f3136"; //The Color of the Message Embeds - Discord Embed Color Like SyncMe Discord Bot
 
 client.on("messageCreate", async message => {
     if(message.content.startsWith(`${PREFIX}akinator`)) {
@@ -70,14 +67,9 @@ client.on("messageCreate", async message => {
 client.login("Discord Bot Token")
 ```
 
-## Contributors
-
-- [ChaosArising (Josh_#9733)](https://github.com/ChaosArising) (Providing compatibility for Discord.js v13)
-
-- [3061LRTAGSPKJMORMRT (Ashish#0540)](https://github.com/3061LRTAGSPKJMORMRT) (Error handling and writing much cleaner code)
-
 ## Contact Us
 
-- 👋 Need Help? [Join Our Discord Server](https://discord.gg/P2g24jp)!
+- 👋  [Join Our Discord Server](https://discord.gg/Yn7ctmKmvq)!
 
-- 👾 Found a Bug, or Inaccurate Translations? [Open an Issue](https://github.com/WillTDA/Discord.js-Akinator-Package-Dev/issues), or Fork and [Submit a Pull Request](https://github.com/WillTDA/Discord.js-Akinator-Package-Dev/pulls) on our [GitHub Repository](https://github.com/WillTDA/Discord.js-Akinator-Package-Dev)!
+## SyncMe Discord Bot
+- 👋  [Invite SyncMe](https://discord.com/api/oauth2/authorize?client_id=699548270892023868&scope=bot+applications.commands&permissions=8)
