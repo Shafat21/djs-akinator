@@ -13,28 +13,61 @@ module.exports = async function awaitInput(useButtons, input, botMessage, isGues
     //check if useButtons is true. If so, use buttons.  If not, use text input
     if (useButtons) {
 
-        let yes = { type: 2, label: translations.yes, style: 2, custom_id: "✅", emoji: { name: "859388130411282442" } }
-        let no = { type: 2, label: translations.no, style: 2, custom_id: "❌", emoji: { name: "859388130636988436" } }
-        let idk = { type: 2, label: translations.dontKnow, style: 2, custom_id: "❓", emoji: { name: "860133545905225768" } }
-        let probably = { type: 2, label: translations.probably, style: 2, custom_id: "👍", emoji: { name: "865488228719394876" } }
-        let probablyNot = { type: 2, label: translations.probablyNot, style: 2, custom_id: "👎", emoji: { name: "865488228642848778" } }
-        let back = { type: 2, label: translations.back, style: 2, custom_id: "⏪", emoji: { name: "860123643816312852" } }
-        let stop = { type: 2, label: translations.stop, style: 4, custom_id: "🛑", emoji: { name: "868122243845206087" } }
+
+        let yes = new Discord.MessageButton()
+            .setLabel(translations.yes)
+            .setStyle("SECONDARY")
+            .setEmoji("859388130411282442")
+            .setCustomId("✅")
+
+        let no = new Discord.MessageButton()
+            .setLabel(translations.no)
+            .setStyle("SECONDARY")
+            .setEmoji("859388130636988436")
+            .setCustomId("❌")
+
+        let idk = new Discord.MessageButton()
+            .setLabel(translations.dontKnow)
+            .setStyle("SECONDARY")
+            .setEmoji("860133545905225768")
+            .setCustomId("❓")
+
+        let probably = new Discord.MessageButton()
+            .setLabel(translations.probably)
+            .setStyle("SECONDARY")
+            .setEmoji("865488228719394876")
+            .setCustomId("👍")
+
+        let probablyNot = new Discord.MessageButton()
+            .setLabel(translations.probablyNot)
+            .setStyle("SECONDARY")
+            .setEmoji("865488228642848778")
+            .setCustomId("👎")
+
+        let back = new Discord.MessageButton()
+            .setLabel(translations.back)
+            .setStyle("SECONDARY")
+            .setEmoji("860123643816312852")
+            .setCustomId("⏪")
+
+        let stop = new Discord.MessageButton()
+            .setLabel(translations.stop)
+            .setStyle("DANGER")
+            .setEmoji("868122243845206087")
+            .setCustomId("🛑")
 
         let answerTypes = [];
 
         if (isGuessFilter) {
             answerTypes = [yes, no]
-        }
-        else {
+        } else {
             answerTypes = [yes, no, idk, probably, probablyNot, back, stop]
         }
 
         let choice = await buttonMenu(input.client, input, botMessage, answerTypes, 60000);
         if (!choice) return null;
         else return choice;
-    }
-    else {
+    } else {
         let filter;
         if (isGuessFilter) {
             filter = x => {
@@ -75,8 +108,7 @@ module.exports = async function awaitInput(useButtons, input, botMessage, isGues
 
         if (!response.size) {
             return null
-        }
-        else {
+        } else {
             await response.first().delete();
             return await translate(String(response.first()).toLowerCase(), language)
         }
