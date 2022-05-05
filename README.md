@@ -59,7 +59,7 @@ client.on("messageCreate", async message => {
             childMode: childMode, //Defaults to "false"
             gameType: gameType, //Defaults to "character"
             useButtons: useButtons, //Defaults to "false"
-            embedColor: embedColor //Defaults to "RANDOM"
+            embedColor: embedColor //Defaults to "#2f3136"
         });
     }
 });
